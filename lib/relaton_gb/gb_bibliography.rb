@@ -33,7 +33,7 @@ module RelatonGb
           TScrapper.scrape_page text
         else
           # Scrape sector standard.
-          # require "sec_scrapper"#"relaton_gb/sec_scrapper"
+          require "relaton_gb/sec_scrapper"
           SecScrapper.scrape_page text
           #[]
         end
