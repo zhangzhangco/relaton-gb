@@ -33,9 +33,9 @@ module RelatonGb
           TScrapper.scrape_page text
         else
           # Scrape sector standard.
-          # require "relaton_gb/sec_scrapper"
-          # SecScrapper.scrape_page text
-          []
+          # require "sec_scrapper"#"relaton_gb/sec_scrapper"
+          SecScrapper.scrape_page text
+          #[]
         end
       end
       # rubocop:enable Metrics/MethodLength
