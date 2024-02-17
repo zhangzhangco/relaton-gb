@@ -60,7 +60,7 @@ module RelatonGb
       def get_titles(doc)
         # titles = [{ title_main: doc.at("//h4").text.delete("\r\n\t"),
         #             title_intro: nil, language: "zh", script: "Hans" }]
-        tzh = doc.at("//h4").text.delete("\r\n\t")
+        tzh = doc.at("//h4/text()[1]").text.delete("\r\n\t")
         RelatonBib::TypedTitleString.from_string tzh, "zh", "Hans"
         # title_main = doc.at("//td[contains(text(), '英文标准名称')]").text.match(/[\w\s]+/).to_s
         # unless title_main.empty?
